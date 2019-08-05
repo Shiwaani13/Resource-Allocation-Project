@@ -1,0 +1,16 @@
+        .card-img{
+           margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+        padding: 70px 100px;
+          height: 600px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+    
+        }
+        .card-title{
+            position:absolute
+        }

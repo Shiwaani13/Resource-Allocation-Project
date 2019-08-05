@@ -1,0 +1,19 @@
+<div class="main">
+  <ul>
+  <li class="bigtab">Admin</li>
+  <li class="smalltabs"><a href="/dm">Timeline</a></li>
+  <li class="smalltabs"><a href="/dm">Search</a></li>
+  </ul>
+ </div>
+ <div class="background">
+  <img src="assets/wallpaper.jpeg" width="100%" height="100%">
+ </div>
+ <div class="upload">
+  <input type="file" multiple name="file" class="fileInput" onchange="getDate(this.files)" ng2FileSelect [uploader]="uploader" />
+  
+  <button type="button" class="btn btn-success btn-s" 
+  (click)="uploader.uploadAll()" 
+  [disabled]="!uploader.getNotUploadedItems().length" >
+  Upload a File
+  </button>
+ </div>

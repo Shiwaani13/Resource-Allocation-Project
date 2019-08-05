@@ -1,0 +1,68 @@
+1) Fact table  :
+
+
+
+
+
+
+
+
+
+	
+		
+			
+
+CREATE TABLE `resource_details` (
+`resource_id` varchar(100) NOT NULL,
+
+				`resource_name` varchar(100) DEFAULT NULL,
+
+				`role` varchar(100) DEFAULT NULL,
+
+				PRIMARY KEY (`resource_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+		
+	
+
+2) Dimension table 1 :
+	
+CREATE TABLE `project_details` (
+`resource_id` varchar(100) NOT NULL,
+
+				`client_name` varchar(100) DEFAULT NULL,
+
+				`project_name` varchar(100) DEFAULT NULL,
+
+				`current_DM` varchar(100) NOT NULL,
+
+				KEY `project_details` (`resource_id`),
+
+				CONSTRAINT `project_details` FOREIGN KEY (`resource_id`) REFERENCES `resource_details` (`resource_id`)
+) 
+				ENGINE=InnoDB DEFAULT CHARSET=latin1;	
+
+3) Dimension table 2 :
+
+CREATE TABLE `res_status` (
+`res_id` varchar(100) NOT NULL,
+
+			`pid` varchar(100) NOT NULL,
+
+			`iu` varchar(100) NOT NULL,
+
+			`pay_class` varchar(100) NOT NULL,
+			
+`status_type` varchar(100) NOT NULL,
+			
+KEY `res_status` (`res_id`),
+			
+CONSTRAINT `res_status` FOREIGN KEY (`res_id`) REFERENCES `resource_details` (`resource_id`)
+) 
+			ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+4) res_portfolio:
+
+CREATE TABLE `employees`.`res_portfolio` ( `resource_id` VARCHAR(100) NOT NULL , 
+					   `portfolio` VARCHAR(500) NOT NULL) 
+						ENGINE = InnoDB;
+	

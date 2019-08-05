@@ -1,0 +1,51 @@
+
+
+         
+<div>  <!--last updated date display-->
+        <h6>Last Updated on <input type="date"></h6>
+        </div>
+<div class="main">
+
+    <ul>
+        
+      <li class="bigtab">DM</li>
+      <li class="smalltabs"><a href="/dmtimeline">Timeline</a></li>
+      <li class="smalltabs"><a href="/search">Search</a></li>
+   
+    </ul>
+
+  </div>
+ 
+    <div>
+    
+      
+      <div class="row">
+        
+        <table class="table">
+        <thead>
+        <tr>
+        <th><input type="text" class="form-control" placeholder="Employee ID" ></th>
+        <th><input type="text" class="form-control" placeholder="Employee Name" disabled></th>
+        <th><input type="text" class="form-control" placeholder="Skillset" disabled></th>
+        <th><input type="text" class="form-control" placeholder="Experience" disabled></th>
+        <th><input type="text" class="form-control" placeholder="Current Project" disabled></th>
+        <th><input type="text" class="form-control" placeholder="Current DM" disabled></th>
+        <th><input type="text" class="form-control" placeholder="Status" disabled></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let result of results">
+        <td>{{result.resource_id}}</td>
+        <td>{{result.resource_name}}</td>
+        <td>{{result.role}}</td>
+        <td>{{result.portfolio}}</td>
+        <td>{{result.status_type}}</td>
+        <td>{{result.project_name}}</td>
+        <td>{{result.current_DM}}</td>
+        </tr>
+        
+        </tbody>
+        </table>
+        </div>
+       </div>
+     
